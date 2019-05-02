@@ -34,6 +34,7 @@ router.post('/', async (req, res) => {
     return res.status(500).send('Server error creating new user');
   }
   res.send(created);
+  return true;
 });
 
 /**
@@ -61,6 +62,8 @@ router.post('/auth', async (req, res) => {
       return res.status(401).send();
     }
     res.send({ user });
+    return true;
   });
+  return true;
 });
 module.exports = router;
