@@ -22,7 +22,7 @@ if (app.get('env') === 'development') {
   console.log('Morgan enabled...');
 }
 
-app.use(logger('dev'));
+app.use(morgan('dev'));
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
